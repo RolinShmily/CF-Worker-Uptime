@@ -317,7 +317,7 @@ groups:
         type: "http"
         url: "https://github.com"
         method: "HEAD"
-        20000
+        timeout: 20000
         expected_latency: 2000
         grace_period: 3
         display:
