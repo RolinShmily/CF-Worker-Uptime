@@ -206,7 +206,7 @@ groups:
         name: "OpenList"
         tags: [sfrp, self]
         type: "http"
-        url: "http://pan.srprolin.top/"
+        url: "https://pan.srprolin.top/"
         method: "GET"
         timeout: 60000
         expected_latency: 1000
@@ -278,7 +278,7 @@ groups:
         name: "Couch数据库"
         tags: [esa, self]
         type: "http"
-        url: "https://couchdb.srprolin.top/"
+        url: "https://couchdb.srprolin.top/_utils/"
         method: "HEAD"
         timeout: 60000
         expected_latency: 1000
