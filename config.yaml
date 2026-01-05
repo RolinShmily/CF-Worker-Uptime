@@ -86,7 +86,7 @@ groups:
         name: "站点状态监控"
         tags: [cfw]
         type: "http"
-        url: "https://cf-uptime.srprolin.top"
+        url: "https://up.srprolin.top"
         method: "HEAD"
         timeout: 60000
         expected_latency: 1000
@@ -159,7 +159,7 @@ groups:
 
       - id: "LGnewUI_esa"
         name: "情侣小站"
-        tags: [esa]
+        tags: [esa, self]
         type: "http"
         url: "https://love.srprolin.top/"
         method: "HEAD"
@@ -202,6 +202,36 @@ groups:
         validation:
           status: 200
 
+      - id: "nodecrypt_cf"
+        name: "端到端聊天室"
+        tags: [cfw]
+        type: "http"
+        url: "https://chat.srprolin.top"
+        method: "HEAD"
+        timeout: 60000
+        expected_latency: 1000
+        grace_period: 3
+        display:
+          chart: true
+          public_link: true
+        validation:
+          status: 200
+
+      - id: "easy-cover_eo"
+        name: "快速封面图制作"
+        tags: [eop]
+        type: "http"
+        url: "https://eo-cover.srprolin.top/"
+        method: "HEAD"
+        timeout: 60000
+        expected_latency: 1000
+        grace_period: 3
+        display:
+          chart: true
+          public_link: true
+        validation:
+          status: 200
+
       - id: "umami_nginx"
         name: "站点访客统计"
         tags: [esa, self]
@@ -217,21 +247,6 @@ groups:
         validation:
           status: 200
 
-      - id: "img_eo"
-        name: "随机图API"
-        tags: [eop]
-        type: "http"
-        url: "https://eo-img.srprolin.top/"
-        method: "HEAD"
-        timeout: 60000
-        expected_latency: 1000
-        grace_period: 3
-        display:
-          chart: true
-          public_link: false
-        validation:
-          status: 200
-
       - id: "vaultwarden_nginx"
         name: "VaultWarden"
         tags: [esa, self]
@@ -244,6 +259,51 @@ groups:
         display:
           chart: true
           public_link: false
+        validation:
+          status: 200
+
+      - id: "couchdb_nginx"
+        name: "Couch数据库"
+        tags: [esa, self]
+        type: "http"
+        url: "https://couchdb.srprolin.top/"
+        method: "HEAD"
+        timeout: 60000
+        expected_latency: 1000
+        grace_period: 3
+        display:
+          chart: true
+          public_link: false
+        validation:
+          status: 200
+
+      - id: "img_eo"
+        name: "随机图API"
+        tags: [eop]
+        type: "http"
+        url: "https://eo-img.srprolin.top/"
+        method: "HEAD"
+        timeout: 60000
+        expected_latency: 1000
+        grace_period: 3
+        display:
+          chart: true
+          public_link: true
+        validation:
+          status: 200
+
+      - id: "gh-oauth_cf"
+        name: "Github OAuth代理"
+        tags: [cfw]
+        type: "http"
+        url: "https://gh-oauth.srprolin.top/"
+        method: "HEAD"
+        timeout: 60000
+        expected_latency: 1000
+        grace_period: 3
+        display:
+          chart: true
+          public_link: true
         validation:
           status: 200
 
