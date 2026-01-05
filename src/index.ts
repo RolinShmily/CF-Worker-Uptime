@@ -16,6 +16,15 @@ interface Env {
 
 const app = new Hono<{ Bindings: Env }>();
 
+// Helper to strip private info from monitor config
+function sanitizeMonitor(monitor: Monitor) {
+  const safe = { ...monitor };
+  if (!monitor.display?.public_link) {
+    delete (safe as any).url;
+  }
+  return safe;
+}
+
 app.use('*', cors());
 
 // --- Frontend ---
@@ -36,7 +45,10 @@ app.get('/api/config', (c) => {
       summary_exclusion: config.settings.summary_exclusion,
       // hide callback_url/secret
     },
-    groups: config.groups,
+    groups: config.groups.map(group => ({
+      ...group,
+      monitors: group.monitors.map(sanitizeMonitor)
+    })),
     incidents: config.incidents,
   };
   return c.json(safeConfig);
@@ -63,8 +75,9 @@ app.get('/api/status', async (c) => {
     ...group,
     monitors: group.monitors.map(monitor => {
       const state = stateMap.get(monitor.id);
+      const safeMonitor = sanitizeMonitor(monitor);
       return {
-        ...monitor,
+        ...safeMonitor,
         state: state || { status: 'UNKNOWN', last_checked_at: 0, last_latency: 0 },
         recent_checks: historyMap.get(monitor.id) || []
       };
