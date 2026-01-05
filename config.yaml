@@ -127,6 +127,21 @@ groups:
         validation:
           status: 200
 
+      - id: "blog_cf"
+        name: "博客-CloudFlare"
+        tags: [cfw]
+        type: "http"
+        url: "https://cf-blog.srprolin.top/"
+        method: "HEAD"
+        timeout: 60000
+        expected_latency: 1000
+        grace_period: 3
+        display:
+          chart: true
+          public_link: true
+        validation:
+          status: 200
+
       - id: "doc_eo"
         name: "文档页"
         tags: [eop]
@@ -174,7 +189,7 @@ groups:
 
       - id: "img_cf"
         name: "画廊"
-        tags: [cfp]
+        tags: [cfw]
         type: "http"
         url: "https://img.srprolin.top/"
         method: "HEAD"
@@ -191,7 +206,7 @@ groups:
         name: "OpenList"
         tags: [sfrp, self]
         type: "http"
-        url: "https://pan.srprolin.top/"
+        url: "http://pan.srprolin.top/"
         method: "GET"
         timeout: 60000
         expected_latency: 1000
@@ -202,20 +217,17 @@ groups:
         validation:
           status: 200
 
-      - id: "nodecrypt_cf"
-        name: "端到端聊天室"
-        tags: [cfw]
-        type: "http"
-        url: "https://chat.srprolin.top"
-        method: "HEAD"
+      - id: "Minecraft_mac"
+        name: "BetterMCv54服务器"
+        tags: [sfrp, self]
+        type: "tcp"
+        url: "frp-ten.com:38710"
         timeout: 60000
         expected_latency: 1000
         grace_period: 3
         display:
           chart: true
-          public_link: true
-        validation:
-          status: 200
+          public_link: false
 
       - id: "easy-cover_eo"
         name: "快速封面图制作"
@@ -297,51 +309,6 @@ groups:
         tags: [cfw]
         type: "http"
         url: "https://gh-oauth.srprolin.top/"
-        method: "HEAD"
-        timeout: 60000
-        expected_latency: 1000
-        grace_period: 3
-        display:
-          chart: true
-          public_link: true
-        validation:
-          status: 200
-
-      - id: "linktree_cf"
-        name: "电子名片-CloudFlare"
-        tags: [cfp]
-        type: "http"
-        url: "https://cf-link.srprolin.top/"
-        method: "HEAD"
-        timeout: 60000
-        expected_latency: 1000
-        grace_period: 3
-        display:
-          chart: true
-          public_link: true
-        validation:
-          status: 200
-
-      - id: "blog_cf"
-        name: "博客-CloudFlare"
-        tags: [cfp]
-        type: "http"
-        url: "https://cf-blog.srprolin.top/"
-        method: "HEAD"
-        timeout: 60000
-        expected_latency: 1000
-        grace_period: 3
-        display:
-          chart: true
-          public_link: true
-        validation:
-          status: 200
-
-      - id: "doc_cf"
-        name: "文档-CloudFlare"
-        tags: [cfp]
-        type: "http"
-        url: "https://cf-blog.srprolin.top/"
         method: "HEAD"
         timeout: 60000
         expected_latency: 1000
