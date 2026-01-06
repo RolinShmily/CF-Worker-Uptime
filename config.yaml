@@ -206,7 +206,7 @@ groups:
         name: "OpenList"
         tags: [sfrp, self]
         type: "tcp"
-        url: "pan.srprolin.top"
+        url: "pan.srprolin.top:80"
         timeout: 60000
         expected_latency: 1000
         grace_period: 3
@@ -275,7 +275,7 @@ groups:
         name: "couch数据库"
         tags: [esa, self]
         type: "tcp"
-        url: "couchdb.srprolin.top"
+        url: "couchdb.srprolin.top:80"
         timeout: 60000
         expected_latency: 1000
         grace_period: 3
