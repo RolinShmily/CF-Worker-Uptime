@@ -205,8 +205,8 @@ groups:
       - id: "pan_mac"
         name: "OpenList"
         tags: [sfrp, self]
-        type: "http"
-        url: "https://pan.srprolin.top/"
+        type: "tcp"
+        url: "pan.srprolin.top"
         method: "GET"
         timeout: 60000
         expected_latency: 1000
@@ -275,10 +275,10 @@ groups:
           status: 200
 
       - id: "couchdb_nginx"
-        name: "Couch数据库"
+        name: "couch数据库"
         tags: [esa, self]
-        type: "http"
-        url: "https://couchdb.srprolin.top/_utils/"
+        type: "tcp"
+        url: "couchdb.srprolin.top"
         method: "HEAD"
         timeout: 60000
         expected_latency: 1000
