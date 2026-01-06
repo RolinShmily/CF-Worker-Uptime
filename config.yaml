@@ -207,7 +207,6 @@ groups:
         tags: [sfrp, self]
         type: "tcp"
         url: "pan.srprolin.top"
-        method: "GET"
         timeout: 60000
         expected_latency: 1000
         grace_period: 3
@@ -279,7 +278,6 @@ groups:
         tags: [esa, self]
         type: "tcp"
         url: "couchdb.srprolin.top"
-        method: "HEAD"
         timeout: 60000
         expected_latency: 1000
         grace_period: 3
