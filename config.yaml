@@ -187,11 +187,11 @@ groups:
         validation:
           status: 200
 
-      - id: "img_cf"
+      - id: "img_eo"
         name: "画廊"
-        tags: [cfw]
+        tags: [eop]
         type: "http"
-        url: "https://img.srprolin.top/"
+        url: "https://eo-img.srprolin.top/"
         method: "HEAD"
         timeout: 60000
         expected_latency: 1000
@@ -213,7 +213,7 @@ groups:
         display:
           chart: true
           public_link: true
-          
+
       - id: "Minecraft_mac"
         name: "BetterMCv54服务器"
         tags: [sfrp, self]
@@ -283,11 +283,11 @@ groups:
           chart: true
           public_link: false
 
-      - id: "img_eo"
+      - id: "img_cf"
         name: "随机图API"
-        tags: [eop]
+        tags: [cfw]
         type: "http"
-        url: "https://eo-img.srprolin.top/"
+        url: "https://img.srprolin.top/"
         method: "HEAD"
         timeout: 60000
         expected_latency: 1000
