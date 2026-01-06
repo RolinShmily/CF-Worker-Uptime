@@ -213,9 +213,7 @@ groups:
         display:
           chart: true
           public_link: true
-        validation:
-          status: 200
-
+          
       - id: "Minecraft_mac"
         name: "BetterMCv54服务器"
         tags: [sfrp, self]
@@ -284,8 +282,6 @@ groups:
         display:
           chart: true
           public_link: false
-        validation:
-          status: 200
 
       - id: "img_eo"
         name: "随机图API"
