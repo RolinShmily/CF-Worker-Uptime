@@ -127,21 +127,6 @@ groups:
         validation:
           status: 200
 
-      - id: "blog_cf"
-        name: "博客-CloudFlare"
-        tags: [cfw]
-        type: "http"
-        url: "https://cf-blog.srprolin.top/"
-        method: "HEAD"
-        timeout: 60000
-        expected_latency: 1000
-        grace_period: 3
-        display:
-          chart: true
-          public_link: true
-        validation:
-          status: 200
-
       - id: "doc_eo"
         name: "文档页"
         tags: [eop]
