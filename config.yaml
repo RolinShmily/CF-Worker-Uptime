@@ -355,17 +355,3 @@ groups:
           public_link: true
         validation:
           status: 200
-
-      - id: "sfrp"
-        name: "Sakura Frp"
-        type: "http"
-        url: "https://www.natfrp.com/"
-        method: "HEAD"
-        timeout: 60000
-        expected_latency: 3000
-        grace_period: 3
-        display:
-          chart: true
-          public_link: true
-        validation:
-          status: 200
