@@ -142,6 +142,21 @@ groups:
         validation:
           status: 200
 
+      - id: "VanNav_nginx"
+        name: "导航站"
+        tags: [esa, self]
+        type: "http"
+        url: "https://navi.srprolin.top/"
+        method: "HEAD"
+        timeout: 60000
+        expected_latency: 1000
+        grace_period: 3
+        display:
+          chart: true
+          public_link: true
+        validation:
+          status: 200
+
       - id: "LGnewUI_esa"
         name: "情侣小站"
         tags: [esa, self]
@@ -346,6 +361,20 @@ groups:
         name: "Baidu"
         type: "http"
         url: "https://www.baidu.com"
+        method: "HEAD"
+        timeout: 60000
+        expected_latency: 3000
+        grace_period: 3
+        display:
+          chart: true
+          public_link: true
+        validation:
+          status: 200
+
+      - id: "sfrp"
+        name: "Sakura Frp"
+        type: "http"
+        url: "https://www.natfrp.com/"
         method: "HEAD"
         timeout: 60000
         expected_latency: 3000
