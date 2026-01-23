@@ -187,30 +187,6 @@ groups:
         validation:
           status: 200
 
-      - id: "pan_mac"
-        name: "OpenList"
-        tags: [sfrp, self]
-        type: "tcp"
-        url: "pan.srprolin.top:80"
-        timeout: 60000
-        expected_latency: 1000
-        grace_period: 3
-        display:
-          chart: true
-          public_link: true
-
-      - id: "Minecraft_mac"
-        name: "BetterMCv54服务器"
-        tags: [sfrp, self]
-        type: "tcp"
-        url: "frp-ten.com:38710"
-        timeout: 60000
-        expected_latency: 1000
-        grace_period: 3
-        display:
-          chart: true
-          public_link: false
-
       - id: "easy-cover_eo"
         name: "快速封面图制作"
         tags: [eop]
