@@ -187,21 +187,6 @@ groups:
         validation:
           status: 200
 
-      - id: "easy-cover_eo"
-        name: "快速封面图制作"
-        tags: [eop]
-        type: "http"
-        url: "https://eo-cover.srprolin.top/"
-        method: "HEAD"
-        timeout: 60000
-        expected_latency: 1000
-        grace_period: 3
-        display:
-          chart: true
-          public_link: true
-        validation:
-          status: 200
-
       - id: "umami_nginx"
         name: "站点访客统计"
         tags: [esa, self]
